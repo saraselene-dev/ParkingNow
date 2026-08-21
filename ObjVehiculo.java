@@ -18,7 +18,6 @@ Para camioneta hora/fracción el 5%.
 Para sedan hora/fracción el 3%.
 
 Se requiere un informe ordenado tipo y mensualidad.  */
- */
 
 public class ObjVehiculo {
     private String Placa;
@@ -29,7 +28,7 @@ public class ObjVehiculo {
     private boolean Mensualidad;
     private double TotalPagar;
     private double Descuento;
-    
+
     public ObjVehiculo() {
     }
 
@@ -77,8 +76,13 @@ public class ObjVehiculo {
         return Mensualidad;
     }
 
-    public void setMensualidad(boolean mensualidad) {
-        Mensualidad = mensualidad;
+    public void setMensualidad(String mensual) {
+        if (mensual.equalsIgnoreCase("SI")) {
+
+            Mensualidad = true;
+        } else {
+            Mensualidad = false;
+        }
     }
 
     public double getTotalPagar() {
