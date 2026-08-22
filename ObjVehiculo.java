@@ -21,7 +21,7 @@ Se requiere un informe ordenado tipo y mensualidad.  */
 
 public class ObjVehiculo {
     private String Placa;
-    private String TipoVehiculo;
+    private int TipoVehiculo;
     private String Cedula;
     private String Nombre;
     private double ValorHora;
@@ -77,12 +77,7 @@ public class ObjVehiculo {
     }
 
     public void setMensualidad(String mensual) {
-        if (mensual.equalsIgnoreCase("SI")) {
-
-            Mensualidad = true;
-        } else {
-            Mensualidad = false;
-        }
+        Mensualidad = "SI".equalsIgnoreCase(mensual);
     }
 
     public double getTotalPagar() {
